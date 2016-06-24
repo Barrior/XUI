@@ -44,7 +44,7 @@ if (typeof jQuery === 'undefined') {
             }
         };
         //静态资源路径，针对html目录下一级目录
-        Base.assetsUrl = '../../assets/';
+        Base.assetsUrl = '../../../assets/';
 
         //本地调试，针对html目录下二级目录下的*.html
         if( /^http:\/\/localhost:.+pc\/html\/.+\/[\w-]+\.html/.test(location.href) ){
