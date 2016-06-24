@@ -1,0 +1,78 @@
+@import "../../sass/xui/compass";
+
+.calendar-com{
+  width: rem(292);
+  text-align: center;
+  font-size: rem(14);
+  box-shadow: 0 rem(2) rem(2) 0 #ccc;
+  border-radius: rem(3);
+  overflow: hidden;
+  >.calendar-header{
+    background-color: $primary;
+    color: $white-text;
+    >.pa{
+      width: rem(22);
+      height: rem(22);
+      color: $white-text;
+      border-radius: $radius;
+      transition: .4s ease;
+      top: rem(12);
+      &:hover{
+        background-color: rgba(255,255,255,.25);
+      }
+    }
+    >.calendar-prev{
+      left: rem(10);
+    }
+    >.calendar-next{
+      left: auto;
+      right: rem(10);
+    }
+    >.calendar-date{
+      height: rem(46);
+      line-height: rem(46);
+    }
+  }
+  .calendar-body{
+    padding: rem(8);
+    background-color: $white-bgcolor;
+    *::selection{
+      background-color: transparent;
+    }
+    >ul{
+      margin-bottom: 0;
+      >li{
+        float: left;
+        width: rem(36);
+        height: rem(36);
+        line-height: rem(38);
+        margin-bottom: rem(4);
+        text-align: center;
+        overflow: hidden;
+        &:not(:nth-child(7n)){
+          margin-right: rem(4);
+        }
+      }
+    }
+    >.calendar-indi{
+      >li{
+        color: $primary;
+      }
+    }
+    >.calendar-list{
+      >li:not(:empty){
+        color: #8f91aa;
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+        &:hover{
+          background-color: #E8EEFD;
+        }
+        &.active{
+          background-color: $primary;
+          color: $white-text;
+        }
+      }
+    }
+  }
+}

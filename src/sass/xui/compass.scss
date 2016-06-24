@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+//转换px为rem单位
+@function rem( $num ){
+    @return ( $num / 12 ) + rem;
+}
+
+//过渡
+@mixin transition( $name: all, $time: 0.6s, $easing: ease-out ){
+    transition: $name $time $easing;
+}
+//chrome滚动条样式
+@mixin scroll-bar( $elem, $bar: (), $track: (), $thumb: () ){
+    #{ $elem }::-webkit-scrollbar{
+        width: rem(8);
+        background-color: rgba(0, 0, 0, 0.1);
+        @each $key, $val in $bar{
+            #{ $key } : #{ $val }
+        }
+    }
+    #{ $elem }::-webkit-scrollbar-track{
+        @each $key, $val in $track{
+            #{ $key } : #{ $val }
+        }
+    }
+    #{ $elem }::-webkit-scrollbar-thumb{
+        background-color: rgba(255, 255, 255, 0.9);
+        @each $key, $val in $thumb {
+            #{ $key } : #{ $val }
+        }
+    }
+}
+//动画效果
+$easing: cubic-bezier(.175,.885,.32,1);
+
+//圆角尺寸
+$radius: rem(2);
+
+//字体，微软雅黑
+$font-family: "\5FAE\8F6F\96C5\9ED1";
+
+//字体颜色
+$root-text-color: #333;
+$form-text-color: #555;
+
+$white-text: #fff;
+$lightgray-text: #ccc;
+$gray-text: #777;
+$black-text: #000;
+$red-text: #ff505c;
+$green-text: #00be70;
+$blue-text: #148fcc;
+
+//背景颜色
+$root-bgcolor: #fff;
+$white-bgcolor: #fff;
+$lightgray-bgcolor: #e0e0e0;
+$gray-bgcolor: #ccc;
+$black-bgcolor: #000;
+$red-bgcolor: #ff505c;
+$green-bgcolor: #00be70;
+$blue-bgcolor: #148fcc;
+
+//股票列表颜色
+$stock-gray: #999;
+$stock-red: #ff505c;
+$stock-green: #00be70;
+
+//徽章颜色及圆角
+$badge-bgcolor: #ff505c;
+$badge-raduis: rem(10);
+
+//表单边框颜色
+$input-border-default: #ccc;
+$input-border-highlight: #148fcc;
+//input圆角
+$input-radius: rem(3);
+
+//表格
+$table-striped-bgcolor: $lightgray-bgcolor;
+$table-hover-bgcolor: #f5f5f5;
+$table-border-color: #ccc;
+
+//按钮
+$default-hover: #e6e6e6;
+$default-active: #d4d4d4;
+$default-border-color: #ccc;
+$primary: #148fcc;  //200 90 80
+$primary-hover: #1386bf;    //200 90 75
+$primary-active: #1386bf;
+$primary-border-color: #0e90d2;
+$secondary: #3bb4f2;
+$secondary-hover: #00a0e9;
+$secondary-active: #00a0e9;
+$secondary-border-color: #00a0e9;
+$success: #76cc5f;
+$success-hover: #00be70;
+$success-active: #00be70;
+$success-border-color: #00be70;
+$warning: #fdb926;
+$warning-hover: #ffa21d;
+$warning-active: #ffa21d;
+$warning-border-color: #ffa21d;
+$danger: #ff505c;
+$danger-hover: #d7342e;
+$danger-active: #d7342e;
+$danger-border-color: #d7342e;
+//btn radius
+$btn-radius: $radius;
+//btn padding
+$btn-padding-vertical: .5em;
+$btn-padding-level: 1em;
+$btn-sm-padding-vertical: .2em;
+$btn-sm-padding-level: .6em;
+$btn-lg-padding-vertical: .8em;
+$btn-lg-padding-level: 1.7em;
+
+//进度条
+$progress-radius: $radius;
+$progress-bgcolor: #f5f5f5;
+$progress-bar-bgcolor: #148fcc;
+
+//checkbox,radio
+$checkbox-disabled-color: #C5C5C5;
+$radio-disabled-color: #C5C5C5;
+
+//卡片色值
+$paper-border-color: #e0e0e0;
+$paper-header-bgcolor: #ccc;
+$paper-header-color: #333;
+
+
+
+
+
+
+
+
+
+
+
