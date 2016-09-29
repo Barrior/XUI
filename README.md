@@ -1,2 +1,2 @@
 # xui
-Front end ui framework.
+Front end UI framework, like Bootstrap.
